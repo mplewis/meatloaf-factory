@@ -30,6 +30,7 @@
     "fast-shuffle": "^6.1.1",
     "fastify": "^5.0.0",
     "jackspeak": "^4.0.2",
+    "openai": "^4.69.0",
     "pino": "^9.4.0",
     "pino-pretty": "^11.2.2",
     "zod": "^3.23.8"

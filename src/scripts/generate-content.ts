@@ -1,12 +1,17 @@
 import { shuffle } from 'fast-shuffle'
-import { readFile } from 'fs/promises'
+import { mkdir, readFile, writeFile } from 'fs/promises'
 import { jack } from 'jackspeak'
+import OpenAI from 'openai'
 import { join, resolve } from 'path'
 import { z } from 'zod'
 
 const OPENAI_API_KEY = mustEnv('OPENAI_API_KEY')
 const REPO_ROOT = resolve(__dirname, '../..')
-const ASSET_ROOT = join(REPO_ROOT, 'assets', 'generate-content')
+const ASSETS_ROOT = join(REPO_ROOT, 'assets')
+const TEMPLATE_ROOT = join(ASSETS_ROOT, 'generate-content')
+const CONTENT_ROOT = join(ASSETS_ROOT, 'content')
+
+const openai = new OpenAI({ apiKey: OPENAI_API_KEY })
 
 const genresSchema = z.array(z.object({ genre: z.string(), desc: z.string() }))
 type Genres = z.infer<typeof genresSchema>
@@ -21,14 +26,13 @@ function mustEnv(name: string): string {
 }
 
 async function loadGenres(name: string): Promise<Genre[]> {
-  const path = join(ASSET_ROOT, 'genres', `${name}.json`)
+  const path = join(TEMPLATE_ROOT, 'genres', `${name}.json`)
   const raw = await readFile(path, 'utf-8')
   const data = JSON.parse(raw)
   return genresSchema.parse(data)
 }
 
 function interpolateTemplate(tmpl: string, kv: Record<string, string>): string {
-  console.log({ tmpl, kv })
   return Object.entries(kv)
     .map(([k, v]) => ({
       re: new RegExp(`{${k}}`, 'g'),
@@ -45,8 +49,14 @@ function generatePrompt(tmpl: string, genre: Genre, setting: string) {
   })
 }
 
-function random<T>(arr: T[]): T {
-  return arr[Math.floor(Math.random() * arr.length)]
+async function askGPT(prompt: string): Promise<string> {
+  const completion = await openai.chat.completions.create({
+    model: 'gpt-4o-mini',
+    messages: [{ role: 'user', content: prompt }]
+  })
+  const result = completion.choices[0].message.content
+  if (!result) throw new Error('No response from GPT')
+  return result
 }
 
 function randomN<T>(arr: T[], n: number): T[] {
@@ -67,26 +77,40 @@ function parseArgs() {
     positionals,
     values: { count }
   } = args
-  if (positionals.length < 1) {
+  if (positionals.length < 2) {
     console.error(
-      'Usage: generate-content <description of setting> [--count <number>]'
+      'Usage: generate-content <collection name> <description of setting> [--count <number>]'
     )
     process.exit(1)
   }
-  return { setting: positionals[0], count }
+  return { collection: positionals[0], setting: positionals[1], count }
 }
 
 async function main() {
   const fiction = await loadGenres('fiction')
   const nonfiction = await loadGenres('nonfiction')
   const allGenres = [...fiction, ...nonfiction]
-  const promptTmpl = await readFile(join(ASSET_ROOT, 'prompt.txt'), 'utf-8')
+  const promptTmpl = await readFile(join(TEMPLATE_ROOT, 'prompt.txt'), 'utf-8')
 
-  const { setting, count } = parseArgs()
+  const { collection, setting, count } = parseArgs()
+  const outDir = join(CONTENT_ROOT, collection)
+  await mkdir(outDir, { recursive: true })
+
   const genres = randomN(allGenres, count)
   for (const genre of genres) {
     const prompt = generatePrompt(promptTmpl, genre, setting)
+    const unix_ts = Math.floor(Date.now() / 1000)
+
     console.log(prompt)
+    const start = Date.now()
+    const output = await askGPT(prompt)
+    const duration = Date.now() - start
+    console.log(output)
+    console.log(`Generated in ${(duration / 1000).toFixed(2)} sec`)
+
+    const pathSafeGenre = genre.genre.toLowerCase().replaceAll(' ', '-')
+    const path = join(outDir, `${collection}_${pathSafeGenre}_${unix_ts}.txt`)
+    await writeFile(path, output)
   }
 }
 
