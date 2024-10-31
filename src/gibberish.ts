@@ -1,6 +1,6 @@
 import { random } from './random'
 
-const SENTENCE_ENDS = '.!?'
+const SENTENCE_ENDS_RE = /[.!?'"]\s+/
 
 type PrefixIndex = Record<string, string[]>
 
@@ -16,12 +16,13 @@ export class GibGen {
   }
 
   private buildIndex(corpus: string) {
+    const c = cleanString(corpus)
     const index: PrefixIndex = {}
     const [start, end] = this.lookbackRange
     for (let lookback = start; lookback <= end; lookback++) {
-      for (let i = 0; i < corpus.length - lookback; i++) {
-        const prefix = corpus.slice(i, i + lookback)
-        const nextChar = corpus[i + lookback]
+      for (let i = 0; i < c.length - lookback; i++) {
+        const prefix = c.slice(i, i + lookback)
+        const nextChar = c[i + lookback]
         if (!index[prefix]) {
           index[prefix] = []
         }
@@ -53,7 +54,8 @@ export class GibGen {
     let paragraphs = ''
     for (let i = 0; i < result.length; i++) {
       paragraphs += result[i]
-      if (SENTENCE_ENDS.includes(result[i]) && Math.random() < 0.2) {
+      const bits = result.slice(i - 1, i + 1)
+      if (SENTENCE_ENDS_RE.test(bits) && Math.random() < 0.2) {
         paragraphs += '\n\n'
       }
     }
@@ -65,6 +67,12 @@ export class GibGen {
 
     return paragraphs
   }
+}
+
+function cleanString(input: string) {
+  let output = input.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
+  output = output.replace(/\s+/g, ' ')
+  return output.trim()
 }
 
 function randomPrefix(index: PrefixIndex): string {
