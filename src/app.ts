@@ -1,31 +1,63 @@
 import { fastify as Fastify, FastifyServerOptions } from 'fastify'
 import DOMPurify from 'isomorphic-dompurify'
 import { marked } from 'marked'
-import { generateGibberish, indexGibberish } from './gibberish'
-import corpus from '../assets/banana-pepper.txt?raw'
+import { GibGen } from './gibberish2'
 import template from '../assets/index.html?raw'
+import { basename, dirname, join, resolve } from 'path'
+import { readdir, readFile, stat } from 'fs/promises'
+import { statSync } from 'fs'
+import { shuffle } from 'fast-shuffle'
+import { random } from './random'
+import { fileURLToPath } from 'url'
+import prettyBytes from 'pretty-bytes'
 
-function cleanString(input) {
+const LOOKBACK_RANGE = [12, 16] as const
+const CHARS = 3000
+const GENERATOR_COUNT = 10
+const DOCS_PER_GENERATOR = 3
+
+// https://stackoverflow.com/a/73948058/254187
+const __filename = fileURLToPath(import.meta.url)
+const __dirname = dirname(__filename)
+const REPO_ROOT = resolve(__dirname, '..')
+const DOCS_PATH = join(REPO_ROOT, 'assets', 'content', 'banana-pepper')
+
+function cleanString(input: string) {
   let output = input.replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
   output = output.replace(/\s+/g, ' ')
   return output.trim()
 }
 
-const LOOKBACK_RANGE = [12, 16] as const
-const CHARS = 3000
+async function buildGenerators() {
+  const rawPathsAll = (await readdir(DOCS_PATH))
+    .map((f) => join(DOCS_PATH, f))
+    .filter((p) => statSync(p).isFile() && p.endsWith('.txt'))
 
-export default (opts?: FastifyServerOptions) => {
+  const gens = []
+  for (let i = 0; i < GENERATOR_COUNT; i++) {
+    let corpus = ''
+    const rawPaths = shuffle(rawPathsAll)
+    for (let j = 0; j < DOCS_PER_GENERATOR; j++) {
+      const doc = await readFile(rawPaths[j], 'utf-8')
+      corpus += doc + '\n\n'
+    }
+    const gen = new GibGen(LOOKBACK_RANGE, cleanString(corpus))
+    console.log(`New generator: ${prettyBytes(gen.bytes)}`)
+    for (let j = 0; j < DOCS_PER_GENERATOR; j++) {
+      console.log(`  ${basename(rawPaths[j])}`)
+    }
+    gens.push(gen)
+  }
+  return gens
+}
+
+export default async (opts?: FastifyServerOptions) => {
   const fastify = Fastify(opts)
 
-  const gIndex = indexGibberish(
-    LOOKBACK_RANGE,
-    cleanString(corpus + ' ' + corpus)
-  )
-  console.log(`Index size: ${Object.keys(gIndex).length}`)
-  console.log(`Index bytes: ${JSON.stringify(gIndex).length}`)
-
+  const gens = await buildGenerators()
   fastify.get('/', async (_request, _reply) => {
-    const gibMarkdown = generateGibberish(gIndex, LOOKBACK_RANGE, CHARS)
+    const gen = random(gens)
+    const gibMarkdown = gen.generateGibberish(CHARS)
     const gibHTML = await marked.parse(gibMarkdown)
     const gibSanitized = DOMPurify.sanitize(gibHTML)
     const html = template.replace('<!-- CONTENT -->', gibSanitized)
