@@ -1,0 +1,214 @@
+[
+	{
+		"genre": "Wikipedia Article",
+		"desc": "Concise and structured encyclopedia entry summarizing topics, including an overview, history, and related information, with citations for further reading."
+	},
+	{
+		"genre": "Microhistory",
+		"desc": "In-depth examination of a single event, object, or brief period in history."
+	},
+	{
+		"genre": "Personal Essay",
+		"desc": "Reflective writing that explores personal experiences with universal themes."
+	},
+	{
+		"genre": "Longform Narrative",
+		"desc": "Extended narrative accounts blending storytelling with factual reporting."
+	},
+	{
+		"genre": "Creative Nonfiction",
+		"desc": "Literary style used to convey factual material with narrative techniques."
+	},
+	{
+		"genre": "Memoir",
+		"desc": "Autobiographical account focusing on a specific time or theme in a person’s life."
+	},
+	{
+		"genre": "Investigative Journalism",
+		"desc": "In-depth reporting to uncover truths, often about complex societal issues."
+	},
+	{
+		"genre": "Biography",
+		"desc": "Detailed account of a person’s life and experiences."
+	},
+	{
+		"genre": "Autobiography",
+		"desc": "A person’s life story written by themselves."
+	},
+	{
+		"genre": "Historical Narrative",
+		"desc": "Story-driven exploration of past events and their impact."
+	},
+	{
+		"genre": "Nature Writing",
+		"desc": "Descriptive exploration of nature and the environment."
+	},
+	{
+		"genre": "Travel Writing",
+		"desc": "Account of experiences and observations in various places."
+	},
+	{
+		"genre": "True Crime",
+		"desc": "Real-world criminal cases examined in detail."
+	},
+	{
+		"genre": "Self-Help",
+		"desc": "Guidance-focused writing aimed at personal growth and improvement."
+	},
+	{
+		"genre": "Philosophical Essay",
+		"desc": "Exploration of philosophical ideas through analysis and argument."
+	},
+	{
+		"genre": "Expository Essay",
+		"desc": "Informative writing that explains an idea or concept."
+	},
+	{
+		"genre": "Profile Writing",
+		"desc": "In-depth portrayal of a person, group, or organization."
+	},
+	{
+		"genre": "Science Writing",
+		"desc": "Explanation of scientific topics for a general audience."
+	},
+	{
+		"genre": "Medical Nonfiction",
+		"desc": "Insights into medicine, often written by healthcare professionals."
+	},
+	{
+		"genre": "Anthropological Narrative",
+		"desc": "Human culture and social practices examined narratively."
+	},
+	{
+		"genre": "Food Writing",
+		"desc": "Exploration of food, culture, and culinary history."
+	},
+	{
+		"genre": "Psychology Nonfiction",
+		"desc": "Analysis of psychological concepts and theories."
+	},
+	{
+		"genre": "Political Analysis",
+		"desc": "Examination of political systems, events, or ideologies."
+	},
+	{
+		"genre": "Sociological Nonfiction",
+		"desc": "Studies social structures, interactions, and issues."
+	},
+	{
+		"genre": "Manifesto",
+		"desc": "Declaration of principles, beliefs, or goals by an individual or group."
+	},
+	{
+		"genre": "Instructional Manual",
+		"desc": "Guidance on how to complete a process or operate something."
+	},
+	{
+		"genre": "Technical Writing",
+		"desc": "Clear, detailed explanation of complex subjects, often scientific or engineering-related."
+	},
+	{
+		"genre": "Business Writing",
+		"desc": "Professional content such as reports, proposals, and analyses for business contexts."
+	},
+	{
+		"genre": "How-To Guide",
+		"desc": "Step-by-step instructions on performing a specific task."
+	},
+	{
+		"genre": "Speechwriting",
+		"desc": "Crafting spoken content for public speaking occasions."
+	},
+	{
+		"genre": "Criticism",
+		"desc": "Analysis and interpretation of art, literature, or cultural phenomena."
+	},
+	{
+		"genre": "Epistolary Nonfiction",
+		"desc": "Nonfiction written in the form of letters."
+	},
+	{
+		"genre": "Documentary Script",
+		"desc": "Screenwriting for nonfictional films or series."
+	},
+	{
+		"genre": "Oral History",
+		"desc": "Collection of firsthand accounts on specific events or subjects."
+	},
+	{
+		"genre": "Ethnography",
+		"desc": "In-depth field study of a particular group, society, or culture."
+	},
+	{
+		"genre": "Field Guide",
+		"desc": "Detailed reference for identifying species or features in nature."
+	},
+	{
+		"genre": "Encyclopedic Entry",
+		"desc": "Concise factual description or explanation on a single topic."
+	},
+	{
+		"genre": "White Paper",
+		"desc": "Authoritative report offering solutions or insights on a specific issue."
+	},
+	{
+		"genre": "Case Study",
+		"desc": "Detailed analysis of a single case within a particular context."
+	},
+	{
+		"genre": "Self-Portrait",
+		"desc": "Reflective exploration of the author’s own personality or identity."
+	},
+	{
+		"genre": "Philosophical Dialogue",
+		"desc": "Exploration of ideas through an imagined conversation between characters."
+	},
+	{
+		"genre": "Policy Brief",
+		"desc": "Summary of a policy issue with recommendations for action."
+	},
+	{
+		"genre": "Field Report",
+		"desc": "Detailed record of observations and findings from field research."
+	},
+	{
+		"genre": "Compendium",
+		"desc": "Collection of concise information on a broad topic."
+	},
+	{
+		"genre": "Art History Essay",
+		"desc": "Analysis and exploration of visual art’s history and meaning."
+	},
+	{
+		"genre": "Educational Nonfiction",
+		"desc": "Instructional content designed for learning."
+	},
+	{
+		"genre": "Financial Analysis",
+		"desc": "Examination of financial data for insights or recommendations."
+	},
+	{
+		"genre": "Market Research Report",
+		"desc": "Overview of an industry or market's current trends and insights."
+	},
+	{
+		"genre": "Experimental Nonfiction",
+		"desc": "Combines unusual formats and structures to convey factual material."
+	},
+	{
+		"genre": "Adventure Writing",
+		"desc": "True accounts of thrilling or dangerous expeditions."
+	},
+	{
+		"genre": "Commentary",
+		"desc": "Author's interpretation or opinion on a recent issue or topic."
+	},
+	{
+		"genre": "Social Commentary",
+		"desc": "Observations and critiques on societal norms and structures."
+	},
+	{
+		"genre": "Cybersecurity Analysis",
+		"desc": "Evaluation of threats, practices, and trends in digital security."
+	}
+]

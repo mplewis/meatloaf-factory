@@ -10,7 +10,7 @@
     "dev": "vite",
     "build": "vite build --outDir build --ssr src/server.ts",
     "format": "prettier --config .prettierrc \"src/**/*.{js,json,ts,css,scss,vue,html,md}\" --write",
-    "start": "yarn build && node build/server.js",
+    "start": "pnpm build && node build/server.js",
     "test": "vitest run",
     "test:ui": "vitest --ui",
     "coverage": "vitest --coverage"
@@ -27,9 +27,12 @@
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "env-schema": "^6.0.0",
+    "fast-shuffle": "^6.1.1",
     "fastify": "^5.0.0",
+    "jackspeak": "^4.0.2",
     "pino": "^9.4.0",
-    "pino-pretty": "^11.2.2"
+    "pino-pretty": "^11.2.2",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.7.5",
@@ -37,6 +40,7 @@
     "@vitest/ui": "^2.1.2",
     "c8": "^10.1.2",
     "jsdom": "^25.0.1",
+    "tsx": "^4.19.2",
     "vite": "^5.4.8",
     "vite-plugin-node": "^3.1.0",
     "vitest": "^2.1.2"

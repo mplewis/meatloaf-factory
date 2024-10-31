@@ -1,0 +1,406 @@
+[
+	{
+		"genre": "Biopunk",
+		"desc": "Focuses on biotechnology, genetic engineering, and biological manipulation, often set in dystopian futures."
+	},
+	{
+		"genre": "Silkpunk",
+		"desc": "Combines East Asian-inspired technology with fantasy elements, often using organic and traditional materials."
+	},
+	{
+		"genre": "Hopepunk",
+		"desc": "Centers on characters who embody positivity and resilience despite a harsh world, opposing dystopian themes."
+	},
+	{
+		"genre": "Climate Fiction (Cli-Fi)",
+		"desc": "Explores themes of climate change and its impact on humanity, usually in a speculative or futuristic context."
+	},
+	{
+		"genre": "Dieselpunk",
+		"desc": "Inspired by the aesthetics and technology of the 1920s–1940s, featuring advanced machinery and industrial themes."
+	},
+	{
+		"genre": "Cyber Noir",
+		"desc": "Combines cyberpunk with noir detective elements, focusing on crime in futuristic, tech-laden societies."
+	},
+	{
+		"genre": "Supernatural Horror",
+		"desc": "Features horror elements involving supernatural beings or forces, such as ghosts, demons, or curses."
+	},
+	{
+		"genre": "Bizarro Fiction",
+		"desc": "Emphasizes weird, absurd, and surreal elements, often challenging traditional storytelling norms."
+	},
+	{
+		"genre": "Magical Realism",
+		"desc": "Incorporates magical elements into realistic settings, blending everyday life with fantastical occurrences."
+	},
+	{
+		"genre": "Psychological Horror",
+		"desc": "Focuses on the psychological torment of characters, emphasizing mental terror over physical fear."
+	},
+	{
+		"genre": "Steampunk Romance",
+		"desc": "Combines steampunk aesthetics with romantic plotlines, set in alternate-history worlds with steam-powered tech."
+	},
+	{
+		"genre": "Urban Fantasy",
+		"desc": "Takes place in modern urban settings with fantastical elements like magic, mythical creatures, or supernatural beings."
+	},
+	{
+		"genre": "Post-Apocalyptic Western",
+		"desc": "Merges post-apocalyptic survival themes with Western elements, set in desolate, lawless landscapes."
+	},
+	{
+		"genre": "Feminist Dystopia",
+		"desc": "Focuses on dystopian societies that explore themes of gender and power dynamics, often highlighting feminist perspectives."
+	},
+	{
+		"genre": "Weird Western",
+		"desc": "Blends Western themes with supernatural or horror elements, set in eerie and surreal frontier landscapes."
+	},
+	{
+		"genre": "Historical Fantasy",
+		"desc": "Places fantastical elements in historical settings, blending real events with magic or mythical creatures."
+	},
+	{
+		"genre": "Military Sci-Fi",
+		"desc": "Centers on futuristic military conflicts and technology, focusing on soldiers and war strategy."
+	},
+	{
+		"genre": "Dieselpunk Romance",
+		"desc": "Combines dieselpunk aesthetics with romance, set in worlds inspired by the interwar period."
+	},
+	{
+		"genre": "Southern Gothic",
+		"desc": "Explores dark, eerie aspects of the American South, often featuring flawed characters and decayed settings."
+	},
+	{
+		"genre": "Solarpunk",
+		"desc": "Focuses on optimistic, sustainable futures with eco-friendly technology and harmony with nature."
+	},
+	{
+		"genre": "Mythic Fiction",
+		"desc": "Weaves myths, folklore, or legends into contemporary stories, often exploring timeless human themes."
+	},
+	{
+		"genre": "Noir Fantasy",
+		"desc": "Blends fantasy elements with noir aesthetics, including morally ambiguous characters and dark cityscapes."
+	},
+	{
+		"genre": "Lovecraftian Horror",
+		"desc": "Inspired by H.P. Lovecraft's works, focusing on cosmic horror, ancient gods, and existential dread."
+	},
+	{
+		"genre": "Dark Fantasy",
+		"desc": "Combines fantasy elements with dark, brooding atmospheres and morally complex characters."
+	},
+	{
+		"genre": "Portal Fantasy",
+		"desc": "Features characters traveling between worlds, often discovering magical realms through portals or other means."
+	},
+	{
+		"genre": "Psychological Thriller",
+		"desc": "Centers on suspense and tension within characters' minds, focusing on mental conflict and manipulation."
+	},
+	{
+		"genre": "Space Opera",
+		"desc": "Epic stories in space with grand conflicts, often focusing on character relationships and political intrigue."
+	},
+	{
+		"genre": "Techno Thriller",
+		"desc": "Blends technology with suspense, focusing on high-tech crime, espionage, or military scenarios."
+	},
+	{
+		"genre": "Sword and Planet",
+		"desc": "Combines swords and medieval themes with alien worlds and advanced technology."
+	},
+	{
+		"genre": "Zombie Apocalypse",
+		"desc": "Centers on survival in a world overrun by zombies, focusing on horror and post-apocalyptic themes."
+	},
+	{
+		"genre": "Eco-Fantasy",
+		"desc": "Explores the relationship between nature and magic, often focusing on environmental themes."
+	},
+	{
+		"genre": "Wuxia",
+		"desc": "Chinese genre focusing on martial arts heroes with superhuman abilities, set in ancient China."
+	},
+	{
+		"genre": "Apocalyptic Romance",
+		"desc": "Centers on love stories set against the backdrop of an impending or ongoing apocalypse."
+	},
+	{
+		"genre": "Political Thriller",
+		"desc": "Focuses on political intrigue, corruption, and conspiracies, often in high-stakes government settings."
+	},
+	{
+		"genre": "Speculative Thriller",
+		"desc": "Explores suspense in speculative scenarios, often combining thriller elements with science fiction or fantasy."
+	},
+	{
+		"genre": "Space Horror",
+		"desc": "Combines horror elements with space settings, often focusing on isolation and unknown dangers."
+	},
+	{
+		"genre": "Utopian Sci-Fi",
+		"desc": "Explores idealized future societies, often contrasting current social issues with solutions."
+	},
+	{
+		"genre": "Alternate History",
+		"desc": "Imagines historical events occurring differently, leading to changed timelines or worlds."
+	},
+	{
+		"genre": "Anthropomorphic Fantasy",
+		"desc": "Features anthropomorphic animals with human traits in fantasy or myth-inspired settings."
+	},
+	{
+		"genre": "Grimdark Fantasy",
+		"desc": "Centers on dark, gritty worlds with morally gray characters, violence, and bleak outlooks."
+	},
+	{
+		"genre": "Retro Sci-Fi",
+		"desc": "Futuristic stories with aesthetics inspired by mid-20th-century views of the future."
+	},
+	{
+		"genre": "Space Noir",
+		"desc": "Blends space settings with noir elements, featuring detective-like protagonists in dark, futuristic cities."
+	},
+	{
+		"genre": "High Fantasy",
+		"desc": "Focuses on epic, mythical worlds with elaborate settings, often involving grand quests and magical beings."
+	},
+	{
+		"genre": "Paranormal Romance",
+		"desc": "Combines romance with supernatural elements like ghosts, vampires, or shapeshifters."
+	},
+	{
+		"genre": "Cyberpunk Fantasy",
+		"desc": "Blends cyberpunk tech with magic, often set in dystopian worlds where technology and magic coexist."
+	},
+	{
+		"genre": "Heroic Fantasy",
+		"desc": "Centers on brave heroes and quests in a fantasy setting, focusing on chivalry and valor."
+	},
+	{
+		"genre": "Slasher Horror",
+		"desc": "Features relentless killers targeting victims, often in isolated or enclosed locations."
+	},
+	{
+		"genre": "Historical Mystery",
+		"desc": "Combines historical settings with mystery plots, focusing on period-specific crime and investigation."
+	},
+	{
+		"genre": "Anthology Horror",
+		"desc": "Collections of short horror stories, often linked by a theme, character, or setting."
+	},
+	{
+		"genre": "Urban Horror",
+		"desc": "Horror set in urban environments, exploring modern fears, isolation, and supernatural threats."
+	},
+	{
+		"genre": "Eco-Thriller",
+		"desc": "Focuses on environmental threats and activism, often involving suspense and high-stakes drama."
+	},
+	{
+		"genre": "Political Fantasy",
+		"desc": "Involves fantastical worlds with complex political systems, focusing on power struggles and diplomacy."
+	},
+	{
+		"genre": "Martial Arts Fantasy",
+		"desc": "Centers on martial arts and spiritual combat, often inspired by Asian mythology and techniques."
+	},
+	{
+		"genre": "Psychological Sci-Fi",
+		"desc": "Explores psychological themes within a science fiction context, focusing on mental or existential questions."
+	},
+	{
+		"genre": "Mythological Fantasy",
+		"desc": "Draws heavily on mythology and folklore, weaving ancient myths into fictional stories."
+	},
+	{
+		"genre": "Historical Sci-Fi",
+		"desc": "Combines historical periods with futuristic technology or alternate scientific advances."
+	},
+	{
+		"genre": "Detective Horror",
+		"desc": "Combines horror with detective elements, focusing on investigations into supernatural or gruesome cases."
+	},
+	{
+		"genre": "Epic Poetry Fantasy",
+		"desc": "Fantasy stories told in poetic, epic form, often drawing from mythological traditions."
+	},
+	{
+		"genre": "Gothic Romance",
+		"desc": "Focuses on romance in eerie, Gothic settings with supernatural or mysterious elements."
+	},
+	{
+		"genre": "Afrofuturism",
+		"desc": "Imagines futures and tech-driven societies centered on African cultures and identities."
+	},
+	{
+		"genre": "Sword and Sorcery",
+		"desc": "Action-focused fantasy with warriors and magic, often emphasizing personal quests and battles."
+	},
+	{
+		"genre": "Superhero Fiction",
+		"desc": "Centers on characters with superpowers, focusing on their heroic journeys and battles with evil."
+	},
+	{
+		"genre": "Corporate Dystopia",
+		"desc": "Explores dystopian societies controlled by corporations, often focusing on societal oppression."
+	},
+	{
+		"genre": "Historical Adventure",
+		"desc": "Centers on adventurous exploits within historical settings, combining exploration with historical context."
+	},
+	{
+		"genre": "Rural Noir",
+		"desc": "Noir fiction set in rural areas, focusing on dark and gritty small-town life."
+	},
+	{
+		"genre": "Medical Thriller",
+		"desc": "Suspenseful stories set in medical or hospital settings, often involving epidemics or scientific experimentation."
+	},
+	{
+		"genre": "Space Fantasy",
+		"desc": "Blends science fiction with fantasy, often featuring magical powers or fantastical creatures in space."
+	},
+	{
+		"genre": "Gothic Fantasy",
+		"desc": "Combines Gothic and fantasy elements, focusing on dark, brooding settings and supernatural intrigue."
+	},
+	{
+		"genre": "Alternative History Mystery",
+		"desc": "Alternate history settings with mystery plots, examining 'what-if' scenarios and crime."
+	},
+	{
+		"genre": "Asian Fantasy",
+		"desc": "Fantasy inspired by Asian cultures, folklore, and mythology, often featuring distinct mythical creatures."
+	},
+	{
+		"genre": "Metaphysical Thriller",
+		"desc": "Focuses on suspenseful narratives involving existential themes and otherworldly mysteries."
+	},
+	{
+		"genre": "Weird Fiction",
+		"desc": "Centers on supernatural or otherworldly phenomena that defy traditional horror tropes."
+	},
+	{
+		"genre": "Crime Procedural Sci-Fi",
+		"desc": "Combines futuristic tech with procedural crime solving, focusing on police work in advanced societies."
+	},
+	{
+		"genre": "Family Saga",
+		"desc": "Centers on multi-generational family stories, focusing on familial relationships and legacy."
+	},
+	{
+		"genre": "Paranormal Detective",
+		"desc": "Focuses on detectives investigating paranormal or supernatural cases."
+	},
+	{
+		"genre": "Existential Sci-Fi",
+		"desc": "Centers on philosophical and existential themes within futuristic settings, questioning humanity and reality."
+	},
+	{
+		"genre": "Cozy Mystery",
+		"desc": "Lighthearted mysteries set in small communities, focusing on amateur sleuths solving crimes."
+	},
+	{
+		"genre": "Time Travel Romance",
+		"desc": "Combines time travel with romantic plotlines, exploring love across different eras."
+	},
+	{
+		"genre": "Folk Horror",
+		"desc": "Horror stories drawing on folklore, traditions, and rural superstitions, often set in isolated communities."
+	},
+	{
+		"genre": "Body Horror",
+		"desc": "Focuses on horror involving physical transformation, mutation, or bodily distortion."
+	},
+	{
+		"genre": "Dark Academia",
+		"desc": "Explores dark, intellectual themes, often in academic or elite settings with mysterious or sinister undertones."
+	},
+	{
+		"genre": "Modern Gothic",
+		"desc": "Gothic fiction set in contemporary times, with eerie settings and supernatural or psychological themes."
+	},
+	{
+		"genre": "Sword and Soul",
+		"desc": "Fantasy inspired by African mythology and traditions, often with heroic themes."
+	},
+	{
+		"genre": "Rural Horror",
+		"desc": "Horror set in rural areas, often featuring isolation, small-town secrets, and supernatural elements."
+	},
+	{
+		"genre": "Hard Sci-Fi",
+		"desc": "Focuses on scientifically accurate depictions of future technology and space exploration."
+	},
+	{
+		"genre": "Medieval Fantasy",
+		"desc": "Set in medieval-inspired worlds with fantasy elements like knights, magic, and kingdoms."
+	},
+	{
+		"genre": "Space Pirates",
+		"desc": "Sci-fi focusing on space piracy, exploration, and outlaw characters in the cosmos."
+	},
+	{
+		"genre": "Post-Apocalyptic Horror",
+		"desc": "Combines horror with post-apocalyptic settings, focusing on survival and fear in ruined worlds."
+	},
+	{
+		"genre": "Haunted House Horror",
+		"desc": "Centers on horror within haunted houses, with ghostly occurrences and eerie atmospheres."
+	},
+	{
+		"genre": "Celtic Fantasy",
+		"desc": "Fantasy inspired by Celtic mythology and traditions, often featuring druids and nature magic."
+	},
+	{
+		"genre": "Cuddlecore",
+		"desc": "Fiction focusing on themes of comfort, intimacy, and emotional connection, often featuring characters who find solace in each other."
+	},
+	{
+		"genre": "Mumblecore",
+		"desc": "Character-driven narratives with naturalistic dialogue, often exploring the lives of disaffected youth in urban settings."
+	},
+	{
+		"genre": "Cli-fi (Climate Fiction)",
+		"desc": "Stories centered on climate change and environmental themes, often set in dystopian or near-future scenarios."
+	},
+	{
+		"genre": "Weird West",
+		"desc": "A fusion of Western and speculative fiction, featuring supernatural elements or alternate histories in a frontier setting."
+	},
+	{
+		"genre": "Space Western",
+		"desc": "Combining elements of Westerns with science fiction, featuring outlaws and lawmen in outer space settings."
+	},
+	{
+		"genre": "Coastal Gothic",
+		"desc": "Stories set in coastal environments, emphasizing the eerie and uncanny aspects of seaside life and folklore."
+	},
+	{
+		"genre": "LitRPG",
+		"desc": "Fiction that incorporates elements of role-playing games, often featuring characters who gain experience and levels in a game-like world."
+	},
+	{
+		"genre": "Cozy Fantasy",
+		"desc": "A light-hearted approach to fantasy that emphasizes community, comfort, and wholesome adventures rather than epic quests."
+	},
+	{
+		"genre": "Screwball Comedy",
+		"desc": "Fast-paced, humorous narratives that often involve mistaken identities and absurd situations, usually set in the early 20th century."
+	},
+	{
+		"genre": "Transgressive Fiction",
+		"desc": "Challenging societal norms and taboos through provocative themes, characters, and plotlines."
+	},
+	{
+		"genre": "Domestic Noir",
+		"desc": "Crime fiction set in domestic spaces, exploring themes of betrayal, secrets, and moral ambiguity within families or relationships."
+	}
+]

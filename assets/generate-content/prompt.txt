@@ -1,0 +1,7 @@
+This is a creative writing project.
+
+Write a long-form piece about the following fictional setting. Write sincerely, as if you lived and existed in this world:
+
+{SETTING}
+
+Write this in the genre of {GENRE}: {GENRE_DESC}
